@@ -1,12 +1,9 @@
 %==============================================================================
-% This code is part of the Matlab-based toolbox
+% This code is based on the Matlab-based toolbox
 % FAIR - Flexible Algorithms for Image Registration. 
 % For details see 
 % - https://github.com/C4IR and
 % - http://www.siam.org/books/fa06/
-%==============================================================================
-% Images from a histologial serial sectioning,
-% data courtesy Oliver Schmitt, Institute of Anatomy, University of Rostock, Germany
 %==============================================================================
 
 checkDataFile
