@@ -48,32 +48,4 @@ viewImage2D(Tc,omega,m); colormap(gray(256));
 title('interpolation Makima');
 tEndMakima = toc(tStartMakima);
 
-%tStartMakima = tic; 
-%Tc = interp2(X, Y, dataT, Xq, Yq, 'makima');
-%figure(3); 
-%viewImage2D(Tc,omega,m); colormap(gray(256));
-%title('interpolation spline');
-%tEndMakima = toc(tStartMakima);
- 
-%{
-k     = size(dataT); 
-omega = [0, k(1), 0, k(2)]; 
-M     = {k, 10 * k};   % deux résolutions
-
-tStartMakima = tic; 
-% Grilles centrées sur les cellules
-xc    = reshape(getCellCenteredGrid(omega, M{1}), [], 2);
-xf    = reshape(getCellCenteredGrid(omega, M{1}), [M{1}, 2]);
-
-% Interpolation avec makima
-[X, Y] = meshgrid(0.5:1:511.5, 0.5:1:255.5);
-[Xq, Yq] = meshgrid(xf(1,:,2), xf(:,1,1));
-
-Tc = interp2(X, Y, dataT', Xq, Yq, 'makima');
-
-figure(3); 
-viewImage2D(Tc,omega,m); colormap(gray(256));
-title('interpolation makima');
-tEndMakima = toc(tStartMakima);
-%}
 %==============================================================================
